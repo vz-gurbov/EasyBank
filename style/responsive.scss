@@ -1,0 +1,396 @@
+// Colors
+$darkBlue: hsl(233, 26%, 24%);
+$green: hsl(136, 65%, 51%);
+$cyan: hsl(192, 70%, 51%);
+$grayBlue: hsl(233, 8%, 62%);
+$lightBlue: hsl(220, 16%, 96%);
+$lightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+@media screen and (max-width: 375px) {
+
+    .advantages {
+        &__description {
+            margin-top: 20%;
+        }   
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .advantages {
+
+        margin-top: 10% !important;
+
+
+        &__description {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }   
+    
+        &__intro > p {
+        width: 100%;
+        
+        }
+    }
+
+    .intro {
+        flex-direction: column-reverse;
+    
+    &__invite {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__invite > h1 {
+        font-size: 40px;
+        font-weight: 100;
+        line-height: unset;
+        letter-spacing: -0.71px;
+        color: $darkBlue;
+        padding: 0 24px;
+        margin-top: -10%;
+        padding-bottom: 16px;
+    }
+
+    &__invite > p {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.28px;
+        color: $grayBlue;
+        padding: 0 24px;
+        padding-bottom: 40px;
+    }
+
+    &__preview {
+        background-position-y: -5em;
+        background-position-x: 0;
+        background-size: 150%;
+    }
+    
+    &__preview--image {
+            position: relative;
+            width: 100%;
+            top: -75px;
+            left: 0;
+        }    
+    }
+
+    .articles {    
+
+        &__heading {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: -0.57px;
+        }
+
+        &__latest {
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            align-items: center;
+        }
+
+        &__info {
+            padding-bottom: 10%;
+        }
+    } 
+}
+
+@media screen and (max-width: 940px) {
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 10% 0;
+        
+        &__sitemap {
+            flex-direction: column;
+            margin: 0;
+        }
+
+        &__sitemap--second {
+            padding: 0;
+        }
+
+        &__sitemap--list li, &__sitemap--list a {
+            text-align: center;
+        }
+
+        &__copyright--button {
+            left: 0;
+            margin: 30px 0;
+        }
+
+        &__copyright > a {
+            text-align: center;
+        }
+
+        &__icons {
+            padding: 30px 0;
+        }
+    }
+
+
+    .advantages {
+        padding: 0;
+        margin: 0;
+        margin-top: -25%;
+
+        &__intro {
+            text-align: center;
+        }
+    }
+
+// Hamburger
+    
+.header {
+
+
+    &__navigation {
+        position: relative;
+    }
+
+    &__logo {
+        margin-left: -8em;
+    }
+
+    &__button--request {
+        display: none;
+    }
+
+    &__menu--wrap {
+        position: absolute;
+    }
+
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: $white;
+        width: 100%;
+    }
+
+    &__toggler {
+        visibility: visible;
+        position: fixed;
+        top: 1em;
+        right: 0.5em;
+        z-index: 3;
+        cursor: pointer;
+        width: 60px;
+        height: 30px;
+        opacity: 0;
+    }
+
+    &__hamburger {
+        position: fixed;
+        top: 1em;
+        right: 0.5em;
+        z-index: 1;
+        width: 60px;
+        height: 30px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__hamburger > div {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: $darkBlue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s ease;
+    }
+
+    &__hamburger > div::before,
+    &__hamburger > div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -6px;
+        width: 100%;
+        height: 1px;
+        background: inherit;
+    }
+
+    &__hamburger > div::after {
+        top: 6px;
+    }
+
+    &__toggler:checked + &__hamburger > div {
+        transform: rotate(135deg);
+    }
+    
+    /*Turn burger to X*/
+    &__toggler:checked + &__hamburger > div::before,
+    &__toggler:checked + &__hamburger > div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /*Rotate on hover when checked*/
+    &__toggler:checked:hover + &__hamburger > div {
+        transform: rotate(225deg);
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__menu > div {
+        background-color: $white;
+        width: 88%;
+        border-radius: 4px;
+        height: 265px;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.6s ease;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+    }
+
+    &__menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list > li {
+        padding: 6px 0;
+    }
+
+    &__list > li > a {
+        color: $darkBlue;
+        font-size: 18px;
+        letter-spacing: -0.14px;
+    }
+
+    &__list > li::after {
+     content: '';
+     display: block;
+     width: 0;
+     height: 3px;
+     margin-top: 0.5rem;
+     background: linear-gradient(90deg, rgba(51,211,94,1) 0%, rgba(42,182,217,1) 100%);
+     transition: width 0.6s;
+    }
+
+    &__list > li:hover::after {
+        width: 50%;
+        transition: width 0.6s;
+       }
+
+    &__toggler:checked ~ &__menu {
+            visibility: visible;
+    } 
+
+    &__toggler:checked ~ &__menu > div {
+        transform: scale(1);
+        transition-duration: 0.6s ease;
+    }
+
+    &__toggler:checked ~ &__menu > div > div {
+        opacity: 1;
+        transition: opacity 0.6s ease;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1140px) {
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .advantages {
+
+        &__intro > h2 {
+            padding-top: 10%;
+        }
+
+        &__intro > p {
+            width: 100%;
+            padding: 0 3%;
+        }
+
+        &__description {
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+
+        &__flex {
+            align-items: center;
+        }
+
+        &__paragraph {
+            text-align: center;
+        }
+
+        &__first::before, &__second::before, &__third::before, &__forth::before {
+            margin: 0 auto;
+            margin-bottom: 26%;
+        }
+    }
+
+    .header {
+        &__list {
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1300px) {
+    
+    .articles {    
+
+        padding: 0 10%;
+
+        &__heading {
+            padding: 0;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+    
+        &__latest {
+            flex-wrap: wrap;
+            height: auto;
+            width: 100%;
+            padding: 0;
+        }
+
+        &__info {
+            padding-bottom: 5%;
+        }
+    } 
+}

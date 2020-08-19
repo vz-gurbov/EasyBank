@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure, simple online banking from Santander Bank provides 24/7 account access. Manage your finances and pay bills with seamless internet banking ...
+    ">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>EasyBank - Online Banking | Bank Account | Login</title>
+</head>
+<body>
+<main>
+    <header class="header">
+        <nav class="header__nav">
+            <img class="header__logo" src="../images/logo.svg" alt="logo of the website">
+            <div class="header__navigation">
+                <input type="checkbox" class="header__toggler">
+                <div class="header__hamburger"><div></div></div>
+                <div class="header__menu">
+                    <div>
+                        <div>
+                            <ul class="header__list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/">Contact</a></li>
+                                <li><a href="/">Blog</a></li>
+                                <li><a href="/">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="toggle()"><button class="header__button header__button--request">Request Invite</button></a>
+        </nav>
+    </header>
+
+    <div id="modal"></div>
+    <div class="request" id="popup">
+        <h2 class="request__heading">Refer your friends<br>Get a cash bonus up to <strong>$500</strong></h2>
+        <div class="request__form">
+            <h3>Enter your information</h3>
+            <input type="text" placeholder="Your name">
+            <input type="text" placeholder="Zip code">
+            <input type="text" placeholder="Your email">
+            <button>Continue</button>
+        </div>
+        <a href="#" onclick="toggle()"><button class="header__button request__button--close">Close</button></a>
+    </div>
+
+    <section class="intro">
+        <div class="intro__invite">
+            <h1>Next generation<br>digital banking</h1>
+            <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+            </p>
+            <a href="#" onclick="toggle()"><button class="header__button">Request Invite</button></a>
+        </div>
+        <div class="intro__preview">
+            <img class="intro__preview--image" src="../images/image-mockups.png" alt="EasyBank mobile application">
+        </div>
+    </section>
+    
+    <section class="advantages">
+        <div class="advantages__intro">
+            <h2>Why to choose Easybank?</h2>
+            <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.
+            </p>
+        </div>
+
+        <div class="advantages__description">
+            <div class="advantages__flex">
+                <h3 class="advantages__heading advantages__first">Online Banking</h3>
+                <p class="advantages__paragraph">Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.
+                </p>
+            </div>
+
+            <div class="advantages__flex">
+                <h3 class="advantages__heading advantages__second">Simple Budgeting</h3>
+                <p class="advantages__paragraph">See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.
+                </p>
+            </div>
+
+            <div class="advantages__flex">
+                <h3 class="advantages__heading advantages__third">Fast Onboarding</h3>
+                <p class="advantages__paragraph">We don’t do branches. Open your account in minutes online and start taking control of your finances right away.
+                </p>
+            </div>
+
+            <div class="advantages__flex">
+                <h3 class="advantages__heading advantages__forth">Open API</h3>
+                <p class="advantages__paragraph">Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="articles">
+        <h2 class="articles__heading">Latest Articles</h2>
+        <div class="articles__latest">
+            <div class="articles__info">
+                <div class="articles__author--first"></div>
+                <span class="articles__author">By Claire Robinson</span>
+                <h3 class="articles__title">Receive money in any currency with no fees</h3>
+                <p class="articles__description">The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+            </div>
+
+            <div class="articles__info">
+                <div class="articles__author--second"></div>
+                <span class="articles__author">By Wilson Hutton</span>
+                <h3 class="articles__title">Treat yourself without worrying about money</h3>
+                <p class="articles__description">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …
+                </p>
+            </div>
+
+            <div class="articles__info">
+                <div class="articles__author--third"></div>
+                <span class="articles__author">By Wilson Hutton</span>
+                <h3 class="articles__title">Take your Easybank card wherever you go</h3>
+                <p class="articles__description">We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …</p>
+            </div>
+
+            <div class="articles__info">
+                <div class="articles__author--forth"></div>
+                <span class="articles__author">By Claire Robinson</span>
+                <h3 class="articles__title">Our invite-only Beta accounts are now live!</h3>
+                <p class="articles__description">After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__logos">
+          <img class="footer__logo" src="../images/logo-white.png" alt="logo of the website">
+          <div class="footer__icons">
+            <img src="../images/icon-facebook.svg" alt="logo of facebook">
+            <img src="../images/icon-youtube.svg" alt="logo of youtube">
+            <img src="../images/icon-twitter.svg" alt="logo of twitter">
+            <img src="../images/icon-pinterest.svg" alt="logo of pinteest">
+            <img src="../images/icon-instagram.svg" alt="logo of instagram">
+          </div>
+      </div>
+      <div class="footer__sitemap">
+          <ul class="footer__sitemap--list footer__sitemap--first">
+              <li><a href="/">About Us</a></li>
+              <li><a href="/">Contact</a></li>
+              <li><a href="/">Blog</a></li>
+            </ul>
+            <ul class="footer__sitemap--list footer__sitemap--second">
+                <li><a href="/">Careers</a></li>
+                <li><a href="/">Support</a></li>
+                <li><a href="/">Privacy Policy</a></li>
+            </ul>
+      </div>
+
+      <div class="footer__copyright">
+          <a href="#" onclick="toggle()"><button class="header__button footer__copyright--button">Request Invite</button></a>
+          <span class="footer__copyright--text">&copy;Easybank. All rights reserved</span>
+      </div>
+    </footer>
+</main>
+<script src="../app.js"></script>
+</body>
+</html>
